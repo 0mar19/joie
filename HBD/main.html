@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="icon" href="images/circle.png">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/farouhi.png" class="logo" />
+            <nav>
+                <ul>
+                    <li><a href="">Please</a></li>
+                    <li><a href="">Stay</a></li>
+                    <li><a href="">Forever </a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" />
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="text-box">
+                    <h4>Highlighted Memories together →</h4>
+                    <h1><b>I AM FOREVER</b><br /> thankfull for you,<b>Happy BirthDay! ♥️</b></h1>
+                </div>
+
+                <img src="images/circle.png" class="small1" />
+                <img src="images/circle.png" class="small2" />
+                <img src="images/square.png" class="small3" />
+
+            </div>
+            <div class="col">
+                <div class="gallary-box">
+                    <img src="my love/us2.jpg" id="gallery">
+
+                    <ul>
+						<li class="btn active">00</li>
+                        <li class="btn">01</li>
+                        <li class="btn">02</li>
+                        <li class="btn">03</li>
+                        <li class="btn">04</li>
+                        <li class="btn">05</li>
+						<li class="btn">06</li>
+						<li class="btn">07</li>
+						<li class="btn">08</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <img src="images/circle.png" class="small4" />
+        <img src="images/square.png" class="small5" />
+
+        <footer>
+            I hope you like it, and i hope that you become sure that you mean the word to me. Yours Omar :)
+        </footer>
+    </div>
+  
+
+    <script>
+        var btn = document.getElementsByClassName("btn")
+        var gallery = document.getElementById("gallery")
+
+        var images = new Array(
+			"my love/us2.jpg",
+            "my love/baby.jpg",
+            "my love/baby2.jpg",
+            "my love/us4.jpg",
+            "my love/us3.jpg",
+			"my love/cartoon.jpg",
+			"my love/ss2.jpg",
+			"my love/gifts.jpg",
+			"my love/143.jpg",
+        );
+
+
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function () {
+				gallery.src = images[i];
+                let current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace("active", "");
+                this.className += " active";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
